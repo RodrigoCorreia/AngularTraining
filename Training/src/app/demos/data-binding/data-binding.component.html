@@ -1,0 +1,39 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-1">
+    </div>
+  </section>
+
+<div class="container main-container">
+    <h3>Interpolation</h3>
+    <!--<p>O Número de Cliques é de: {{ contadorClique }}</p>-->
+    <p [ngClass]="{
+        'text-secondary':contadorClique < 3,
+        'text-sucess':contadorClique >= 3,
+        'text-warning':contadorClique >= 5,
+        'text-danger':contadorClique >= 9                
+    }"
+    >O Número de Cliques é de: {{ contadorClique }}</p>
+    <br>
+    <br>
+
+    <h3>Property Biding</h3>
+
+    <button class="btn btn-info" [disabled]='contadorClique >=10'>Info</button>
+    <br>
+    <br>
+
+    <h3>Event Biding</h3>
+
+    <button class="btn btn-warning" (click)='adicioarContador()'>Incrementar Contador</button>
+    <button class="btn btn-danger" (click)='zerarContador()' [disabled]="contadorClique < 10">Zerar Contador</button>
+    <br>
+    <br>
+
+    <h3>Two-Way Biding</h3>
+
+    <!--<input type="text" (keyup)='KeyUp($event)' placeholder="Digite seu nome">
+    <label>Seu nome é: {{nome}}</label>-->
+    <input type="text" [ngModel]="nome" (ngModelChange)='nome = $event' placeholder="Digite seu nome">
+    <label>Seu nome é: {{nome}}</label>
+
+</div>
