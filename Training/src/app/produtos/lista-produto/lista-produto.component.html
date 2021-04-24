@@ -13,9 +13,9 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <h4 class="card-title">{{produto.title}}</h4>
+                    <h4 class="card-title">{{produto.title | titlecase}}</h4>
                     <p>Por Apenas</p>
-                    <div><h4>R${{produto.id}}</h4></div>
+                    <div><h4>{{produto.id | currency:'BRL':symbol:'1.2-2':'pt'}}</h4></div>
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-primary">
