@@ -10,9 +10,9 @@ export class ProdutoService {
 
     }
 
-    protected UrlServiceV1: string = "http://localhost:3000/";
+    protected UrlServiceV1: string = "https://jsonplaceholder.typicode.com/posts";
 
     obterPodutos() : Observable<Produto[]> {
-        return this.http.get<Produto[]>(this.UrlServiceV1 + "produtos");
-    }
+        return this.http.get<Produto[]>(this.UrlServiceV1);
+    }    
 }

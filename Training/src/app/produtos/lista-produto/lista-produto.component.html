@@ -1,0 +1,30 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-1">
+    </div>
+  </section>
+
+<div class="container main-container">
+    <div class="row text-center">
+        <div *ngFor="let produto of produtos" class="col-md-4" style="padding-bottom: 30px;">
+            <div class="card h-100">
+                <a class="text-decoration-none" [routerLink]="['/produto-detalhe', produto.userId]" >
+                    <div style="align-items: center;">
+                        <img src="/assets/AngularLogo.png" height="164px" width="253px" alt="">
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">{{produto.title}}</h4>
+                    <p>Por Apenas</p>
+                    <div><h4>R${{produto.id}}</h4></div>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary">
+                        <span class="fa fa-shopping-cart"></span> Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
